@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Dice Roller",
+  "description": "A visually appealing and interactive dice rolling application. Select the number of dice, click roll, and see the animated results with a total sum.",
+  "requestFramePermissions": []
+}
