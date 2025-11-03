@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-web-app-service
+spec:
+  # LoadBalancer creates a public IP address.
+  # This is what lets the public internet access your app.
+  type: LoadBalancer
+  ports:
+  - port: 80        # The public port people will access
+    targetPort: 80  # The port on your container (from the Deployment)
+  selector:
+    # This service will send traffic to any pod
+    # with the label "app: my-web-app"
+    app: my-web-app
