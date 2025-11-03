@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-project-deployment
+spec:
+  replicas: 2  # This runs 2 copies (pods) of your app
+  selector:
+    matchLabels:
+      app: my-web-app # Connects the Deployment to the pods
+  template:
+    metadata:
+      labels:
+        app: my-web-app # The label for our pods
+    spec:
+      containers:
+      - name: my-web-app
+        # This is a placeholder! 
+        # In Phase 5, our pipeline will automatically replace this
+        # with your real ACR image: devopsprojacrXXXX.azurecr.io/my-web-app:latest
+        image: <YOUR_ACR_LOGIN_SERVER>/my-web-app:latest
+        ports:
+        - containerPort: 80 # This is the port your Nginx server is on
