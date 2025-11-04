@@ -1,0 +1,22 @@
+# Ignore dependencies, to be installed in Docker
+node_modules
+
+# Ignore build output, to be generated in Docker
+dist
+.dist
+
+# Ignore local environment files and secrets
+.env
+.env.local
+.env.*.local
+
+# Ignore Git
+.git
+.gitignore
+
+# Ignore Docker
+.dockerignore
+Dockerfile
+```eof
+
+Once you have saved this file, you are ready for the next step, which is running `npm install` in your terminal.
